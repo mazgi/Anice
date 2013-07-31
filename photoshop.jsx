@@ -26,13 +26,13 @@ PSLayerUtil.prototype = {
     return this.layerColor();
   },
   layerColor: function() {
-                var desc = executeActionGet(this._colorRef);
-                var charID = typeIDToCharID(desc.getEnumerationValue(charIDToTypeID('Clr ')));
-                for(var key in PSLayerUtil.LayerColors) {
-                  var value = PSLayerUtil.LayerColors[key];
-                  if(value === charID) return key;
-                }
-                return 'None';
-              },
+    var desc = executeActionGet(this._colorRef);
+    var charID = typeIDToCharID(desc.getEnumerationValue(charIDToTypeID('Clr ')));
+    for(var key in PSLayerUtil.LayerColors) {
+      var value = PSLayerUtil.LayerColors[key];
+      if(value === charID) return key;
+    }
+    return 'None';
+  },
 }
 
